@@ -65,9 +65,10 @@ public class Main extends ListenerAdapter {
 	{
 		String token = "";
 		try {
-			// Create a file
-			File tokenFile = new File("Discord-JDA-Bot-TOKEN.txt");
-			tokenFile.createNewFile();
+			// Create a file with a given directory
+			File tokenFile = new File("C:" + File.separator + "Discord-JDA-Bot-TOKEN" + File.separator + "Discord-JDA-Bot-TOKEN.txt");
+			tokenFile.mkdirs(); // Make directory
+			tokenFile.createNewFile(); // Make file
 			
 			// Read the file
 			Scanner scanner = new Scanner(tokenFile);
