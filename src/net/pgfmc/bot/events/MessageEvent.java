@@ -12,7 +12,7 @@ public class MessageEvent implements EventListener {
 	@Override
 	public void onEvent(GenericEvent event) {
 		// If GenericEvent isn't of type MessageReceivedEvent, don't run this code
-		if (!(event instanceof MessageReceivedEvent)) { return; }
+		if (!(event instanceof MessageReceivedEvent)) return;
 		
 		// Cast GenericEvent into MessageReceivedEvent
 		MessageReceivedEvent e = (MessageReceivedEvent) event;
@@ -30,8 +30,8 @@ public class MessageEvent implements EventListener {
 		if (!e.getChannel().getId().equals("721951670132801600")) { return; }
 		
 		// Get the channel the message came from and send a message back to it!
-		e.getChannel().sendMessage("🗣 " + user.getName() + " -> " + message).queue(); // queue so it runs when it can
-		e.getMessage().delete().queue(); // Delete the received message, queue so it runs when it can
+		e.getChannel().sendMessage("Poop" + user.getName() + " -> " + message).queue(); // queue so it runs when it can
+//		e.getMessage().delete().queue(); // Delete the received message, queue so it runs when it can
 	}
 
 }

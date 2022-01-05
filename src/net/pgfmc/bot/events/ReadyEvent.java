@@ -13,7 +13,7 @@ public class ReadyEvent implements EventListener {
 		if (!(event instanceof ReadyEvent)) { return; }
 		
 		// Get a guild by it's ID
-		Guild guild = Main.JDA.getGuildById("ID HERE");
+		Guild guild = Main.JDA.getGuildById("721951670132801596");
 		
 		// Get the guild's system channel and send a message
 		// The system channel is defined in the server settings (in Discord)

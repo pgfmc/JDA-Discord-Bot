@@ -50,7 +50,7 @@ public class Main extends ListenerAdapter {
 	 * @param b JDABuilder object
 	 */
 	private static void registerEventListeners(JDABuilder b)
-	{
+	{	
 		b.addEventListeners(new MessageEvent());
 		b.addEventListeners(new ReadyEvent());
 	}
