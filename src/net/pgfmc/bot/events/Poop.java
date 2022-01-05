@@ -13,7 +13,7 @@ public class Poop implements EventListener{
 		if (!(event instanceof GuildMemberUpdateNicknameEvent)) return;
 		GuildMemberUpdateNicknameEvent e = (GuildMemberUpdateNicknameEvent) event;
 		String oldNickname = e.getOldNickname();
-		Main.JDA.getGuildChannelById("").sendMessage("").queue();
+		Main.JDA.getTextChannelById("721951670132801596").sendMessage("Old nickname -> " + oldNickname).queue();
 	}
 
 }
