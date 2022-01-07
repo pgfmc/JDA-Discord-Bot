@@ -13,16 +13,16 @@ public class VoiceUpdate implements EventListener {
 	public void onEvent(GenericEvent event) {
 		if (!(event instanceof GenericGuildVoiceUpdateEvent)) return;
 		GenericGuildVoiceUpdateEvent e = (GenericGuildVoiceUpdateEvent) event;
-		String Member = e.getMember().getUser().getName();
+		String member = e.getMember().getUser().getName();
 		
 		if (event instanceof GuildVoiceJoinEvent)
 		{ 
 		  String channelName = e.getChannelJoined().getName();
-		  Main.JDA.getTextChannelById("721951670132801596").sendMessage(Member + "has left" + channelName);
+		  Main.JDA.getTextChannelById("721951670132801596").sendMessage(member + "has left" + channelName);
 		} else if (event instanceof GuildVoiceLeaveEvent)
 		{
 		  String channelName = e.getChannelLeft().getName();
-		  Main.JDA.getTextChannelById("721951670132801596").sendMessage(Member + "has joined" + channelName);
+		  Main.JDA.getTextChannelById("721951670132801596").sendMessage(member + "has joined" + channelName);
 		}
 	}
 }

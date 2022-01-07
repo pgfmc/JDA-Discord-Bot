@@ -14,7 +14,9 @@ import net.dv8tion.jda.api.requests.GatewayIntent;
 import net.dv8tion.jda.api.utils.ChunkingFilter;
 import net.dv8tion.jda.api.utils.MemberCachePolicy;
 import net.pgfmc.bot.events.MessageEvent;
+import net.pgfmc.bot.events.OldNickname;
 import net.pgfmc.bot.events.ReadyEvent;
+import net.pgfmc.bot.events.VoiceUpdate;
 
 public class Main extends ListenerAdapter {
 	
@@ -53,6 +55,8 @@ public class Main extends ListenerAdapter {
 	{	
 		b.addEventListeners(new MessageEvent());
 		b.addEventListeners(new ReadyEvent());
+		b.addEventListeners(new OldNickname());
+		b.addEventListeners(new VoiceUpdate());
 	}
 	
 	/**
