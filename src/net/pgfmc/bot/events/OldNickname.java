@@ -5,7 +5,7 @@ import net.dv8tion.jda.api.events.guild.member.update.GuildMemberUpdateNicknameE
 import net.dv8tion.jda.api.hooks.EventListener;
 import net.pgfmc.bot.Main;
 
-public class Poop implements EventListener{
+public class OldNickname implements EventListener{
 
 	@Override
 	public void onEvent(GenericEvent event) {
