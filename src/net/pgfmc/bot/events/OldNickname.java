@@ -13,7 +13,7 @@ public class OldNickname implements EventListener{
 		if (!(event instanceof GuildMemberUpdateNicknameEvent)) return;
 		GuildMemberUpdateNicknameEvent e = (GuildMemberUpdateNicknameEvent) event;
 		String oldNickname = e.getOldNickname();
-		Main.JDA.getTextChannelById("721951670132801596").sendMessage("Old nickname -> " + oldNickname).queue();
+		Main.JDA.getTextChannelById("721951670132801600").sendMessage("Old nickname -> " + oldNickname).queue();
 	}
 
 }
